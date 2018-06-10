@@ -14,25 +14,33 @@
         var name= prompt("Welcome to my Chat! \nplease enter your Name to Join");
         var username;
         var socket = io();
-        alert('copyright reserved \u00A9 AAW')
-       if(name){
+        
+       
+        if(name){
         socket.emit('new_user_in',name)
         $('#username').text(name);
-        }
-
-
         socket.on('logdUsers',function(users){
         $("#users").text("");
         for(var user of users){
-            $("#users").append(user.name+"<br>")
+            $("#users").append("&#9899 "+user.name+"<br>")
         }
         
-    })
+        })
+        }
+
+        else{
+            alert("Error! Name can't Be Empty!\nThanks for visiting My Chat")
+          
+            return false;
+
+        }
+
+
     
         socket.on('lodChat',function(chat){
             $('#chatText').html('');
             $('#chatText').append(chat)
-            var element = document.getElementById("chat");
+            var element = document.getElementById("chatText");
             element.scrollTop=element.scrollHeight;
         })
 
@@ -42,7 +50,7 @@
         socket.emit('newMsg',msg);
         $('#chatText').append("Me: "+$('input').val()+"<br>")
         $('input').val("");
-        var element = document.getElementById("chat");
+        var element = document.getElementById("chatText");
         element.scrollTop=element.scrollHeight;
         
         
@@ -51,14 +59,14 @@
         return false;
     })
      
-    socket.on('sinUser',function(uName){
-        username=name;
-    })
+        socket.on('sinUser',function(uName){
+            username=name;
+        })
 
-    socket.on('dispMsg',function(data){
-    $('#chatText').append(data+"<br>")
-    
-    })
+        socket.on('dispMsg',function(data){
+        $('#chatText').append(data+"<br>")
+        
+        })
     
     });
     
@@ -67,26 +75,28 @@
 </script>
 
 <body>
-    <h1>Welcome <span id="username"></span> </h1>
-    <h2>Online Useres:</h2>
-    <div id="loggedUsers" style="overflow: scroll;width: 200px; height: 150px;">
+    <h1>Welcome: <span id="username" style="color: black"></span> </h1>
+    <div id="loggedUsers">
+            <h2>Online Useres:</h2>
         <p id="users"></p>
     </div>
 
-    <h2>Chat:</h2>
-    <div id="chat"  
-    style="outline: solid 2px black ; width: 400px ;
-    height:200px; overflow-y: scroll; padding-left: 10px ;" >
+    <div id="chat">
+            <h2>CHAT</h2>
         <h3 id="chatText"></h3>
-       
+        <form action="">
+        <span >Message: </span> <input type="text" id="msg">
+        <button>Send</button>
+        </form>
     </div>
-
     <br>
-    <form action="">
+    
 
-    Message: <input type="text" id="msg"><br>
-    <button>Send</button>
-    </form>
-
+    <footer>
+        
+        <p>Copyright &#169 2018 Coding Dojo. All rights reserved .</p>
+        <p>Posted by: <a href="https://www.linkedin.com/in/ali-bayati-ba9518134">
+            Ali Bayati</a> </p>
+          </footer>
 </body>
 </html>

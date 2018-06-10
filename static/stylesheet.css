@@ -1,3 +1,183 @@
-h1{
-    color: red;
+
+footer{
+    background-color: black;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 186px;
+    color: gray;
+    left: -17%;
+    width: 130%;
 }
+
+
+@media only screen and (min-width:651px){
+   
+body{
+    padding: 20px;
+    background-color: orange;
+    padding-left: 10%;
+}
+
+h1{
+    color:blue;
+}
+
+
+#users{
+    overflow-y: scroll;
+    width: 169px;
+    height: 400px;
+    display: inline-block;
+    outline: 2px solid;
+    margin-top: 0;
+    padding: 20px;
+    background-color: wheat;
+}
+
+#chatText{
+    outline: solid 2px black ;
+    width: 600px ;
+    height:400px;
+    overflow-y: scroll;
+    
+    background-color: wheat;
+    padding: 20px;
+    
+}
+
+#chat{
+display: inline-block;
+
+}
+#chat h2{
+    text-align: center;
+}
+
+#chat span{
+    font-size: 20px;
+}
+
+#chat input{
+    width: 491px;
+    padding: 4px;
+}
+
+#chat button{
+    padding: 3px;
+    width: 54px;
+    background-color: darkgray;
+    font-size: 14px;
+}
+
+
+#loggedUsers{
+display: inline-block;
+vertical-align: top;
+}
+
+
+
+
+} 
+
+@media only screen and (max-width:1024px){
+
+
+    #loggedUsers{
+        display: inline-block;
+        position: relative;
+        top: 600px;
+    }
+        
+
+    #chatText{
+        outline: solid 2px black;
+        width: 100%;
+        height: 400px;
+        overflow-y: scroll;
+        background-color: wheat;
+        padding: 20px;
+    }
+        
+    
+    #chat{
+        display: inline-block;
+        bottom: 500px;
+        width: 85%;
+        position: relative;
+    }
+
+    #users{
+        overflow: scroll;
+        width: 170px;
+        height: 400px;
+        display: inline-block;
+        outline: 2px solid;
+        margin-top: 0;
+        padding: 2px;
+        background-color: wheat;
+    }
+
+    body{
+        padding: 20px;
+        background-color: orange;
+        padding-left: 2%;
+    }
+
+    
+    
+    
+}
+
+
+
+@media only screen and (max-width:650px){
+
+    #loggedUsers{
+        display: inline-block;
+        position: relative;
+        top: 600px;
+    }
+        
+h1{
+    color:blue;
+}
+    #chatText{
+        outline: solid 2px black ;
+        width: 380px ;
+        height:400px;
+        overflow-y: scroll;
+        
+        background-color:wheat;
+        padding: 20px;
+        
+    }
+    #chat{
+        display: inline-block;
+       bottom: 500px;
+        position: relative;
+    }
+
+    #users{
+        overflow: scroll;
+        width: 170px;
+        height: 400px;
+        display: inline-block;
+        outline: 2px solid;
+        margin-top: 0;
+        padding: 2px;
+        background-color: wheat;
+    }
+
+    body{
+        padding: 20px;
+        background-color: orange;
+        padding-left: 2%;
+    }
+
+    
+    
+    
+}
+
