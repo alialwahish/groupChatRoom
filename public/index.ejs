@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
-    
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Group Chat</title>
 </head>
 <script>
@@ -14,7 +14,7 @@
         var name= prompt("Welcome to my Chat! \nplease enter your Name to Join");
         var username;
         var socket = io();
-        
+        alert('copyright reserved \u00A9 AAW')
        if(name){
         socket.emit('new_user_in',name)
         $('#username').text(name);
@@ -66,10 +66,6 @@
     
 </script>
 
-
-
-
-
 <body>
     <h1>Welcome <span id="username"></span> </h1>
     <h2>Online Useres:</h2>
@@ -91,5 +87,6 @@
     Message: <input type="text" id="msg"><br>
     <button>Send</button>
     </form>
+
 </body>
 </html>
