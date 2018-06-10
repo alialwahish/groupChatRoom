@@ -32,6 +32,8 @@
         socket.on('lodChat',function(chat){
             $('#chatText').html('');
             $('#chatText').append(chat)
+            var element = document.getElementById("chat");
+            element.scrollTop=element.scrollHeight;
         })
 
     $('form').submit(function(){
@@ -40,6 +42,12 @@
         socket.emit('newMsg',msg);
         $('#chatText').append(msg+"<br>")
         $('input').val("");
+        var element = document.getElementById("chat");
+        element.scrollTop=element.scrollHeight;
+        
+        
+              
+
         return false;
     })
      
@@ -49,13 +57,15 @@
 
     socket.on('dispMsg',function(data){
     $('#chatText').append(data+"<br>")
-    })
     
-  
+    })
     
     });
     
+
+    
 </script>
+
 
 
 
