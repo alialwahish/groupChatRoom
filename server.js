@@ -15,7 +15,7 @@ var prvChat='';
 
 io.on('connection',function(socket){
     io.emit("logdUsers",loggedUsers);
-    io.emit('lodChat',prvChat);
+    socket.emit('lodChat',prvChat);
     socket.on('new_user_in',function(data){
         
         user={name:data,

@@ -40,7 +40,7 @@
         msg=username+": "+$('input').val();
         console.log(msg);
         socket.emit('newMsg',msg);
-        $('#chatText').append(msg+"<br>")
+        $('#chatText').append("Me: "+$('input').val()+"<br>")
         $('input').val("");
         var element = document.getElementById("chat");
         element.scrollTop=element.scrollHeight;
