@@ -1,14 +1,5 @@
 
-footer{
-    background-color: black;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 186px;
-    color: gray;
-    left: -17%;
-    width: 130%;
-}
+
 
 
 @media only screen and (min-width:651px){
@@ -76,7 +67,16 @@ display: inline-block;
 vertical-align: top;
 }
 
-
+footer{
+    background-color: black;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top: 186px;
+    color: gray;
+    left: -17%;
+    width: 130%;
+}
 
 
 } 
@@ -125,7 +125,16 @@ vertical-align: top;
         padding-left: 2%;
     }
 
-    
+    footer{
+        background-color: black;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        top: 186px;
+        color: gray;
+        left: -17%;
+        width: 130%;
+    }
     
     
 }
@@ -137,32 +146,47 @@ vertical-align: top;
     #loggedUsers{
         display: inline-block;
         position: relative;
-        top: 600px;
+        top: 300px;
     }
         
 h1{
     color:blue;
 }
+
+#chat input{
+    height: 31px;
+    width: 222px;
+
+
+}
+
+#chat button{
+  
+    padding: 9px;
+    width: 100px;
+    height: 35px;
+    margin-top: 5px;
+
+}
     #chatText{
-        outline: solid 2px black ;
-        width: 380px ;
-        height:400px;
+        outline: solid 2px black;
+        width: 250px;
+        height: 138px;
         overflow-y: scroll;
-        
-        background-color:wheat;
+        background-color: wheat;
         padding: 20px;
         
     }
     #chat{
         display: inline-block;
-       bottom: 500px;
+        bottom: 333px;
         position: relative;
     }
 
     #users{
         overflow: scroll;
-        width: 170px;
-        height: 400px;
+        width: 132px;
+        height: 199px;
         display: inline-block;
         outline: 2px solid;
         margin-top: 0;
@@ -171,13 +195,34 @@ h1{
     }
 
     body{
-        padding: 20px;
+        padding: 0px;
         background-color: orange;
-        padding-left: 2%;
-    }
+        padding-left: 5%;
+        }
 
     
-    
+        footer {
+            background-color: black;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        color: gray;
+        
+     left: 0;
+     bottom: 0px;
+     right: 0;
+
+     margin-left: -27px;
+
+
+
+        }
+
+        footer p{
+            padding: 20px;
+
+
+        }
     
 }
 
